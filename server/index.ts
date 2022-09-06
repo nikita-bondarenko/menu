@@ -1,4 +1,4 @@
-require('dotenv').config()
+const { port } = require("../config")
 
 import express from 'express'
 import { PrismaClient } from '@prisma/client'
@@ -7,7 +7,6 @@ import fs from "fs/promises"
 import path from 'path'
 import multer from 'multer'
 
-const port = process.env.PORT
 const storePort = process.env.STORE_PORT
 const app = express()
 const prisma = new PrismaClient()

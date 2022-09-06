@@ -1,4 +1,6 @@
-const API_URL = 'http://localhost:3000'
-const STORE_URL = 'http://127.0.0.1:8080'
+console.log(process.env.VUE_APP_SERVER_PORT, process.env.VUE_APP_STORE_PORT)
 
-export { API_URL, STORE_URL }
+const BASE_URL = `http://localhost:${process.env.VUE_APP_SERVER_PORT}`
+const STORE_URL = `http://localhost:${process.env.VUE_APP_STORE_PORT}`
+
+export { BASE_URL, STORE_URL }

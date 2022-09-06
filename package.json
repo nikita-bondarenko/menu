@@ -6,10 +6,9 @@
   "scripts": {
     "server": "nodemon server/index.ts --ignore 'client/",
     "client": "npm run serve --prefix client",
-    "store": "http-server ./store/",
+    "store": "nodemon ./store/index",
     "dev": "concurrently \"npm run client\" \"npm run server\"  \"npm run store\"",
     "build": "npm run build --prefix client",
-    "install": "npm install ",
     "postinstall": "npm install --prefix client",
     "prestart": "npm run build ",
     "start": "node server/index.ts && npm run store"

@@ -1,6 +1,6 @@
 import { createStore } from 'vuex'
 import axios from 'axios'
-import { API_URL } from '@/config'
+import { BASE_URL } from '@/config'
 
 export default createStore({
   state: {
@@ -49,22 +49,22 @@ export default createStore({
   },
   actions: {
     async sendReq(context, { method, url, body }) {
-      const res = await axios[method](`${API_URL + '/' + url}`, {
+      const res = await axios[method](`${BASE_URL + '/' + url}`, {
         ...body
       }).then((res) => res.data)
       return res
     },
     async getCategories(context) {
-      const res = await axios.get(`${API_URL}/category`)
+      const res = await axios.get(`${BASE_URL}/category`)
       context.state.categories = res.data.categories
     },
     async getDishes(context, id) {
-      const res = await axios.get(`${API_URL}/category/${id}`)
+      const res = await axios.get(`${BASE_URL}/category/${id}`)
       return res.data
     },
     async deleteCategory(context, id) {
       try {
-        const res = await axios.delete(`${API_URL}/category/${id}`)
+        const res = await axios.delete(`${BASE_URL}/category/${id}`)
         return res.data
       } catch (err) {
         console.log(err)
@@ -73,7 +73,7 @@ export default createStore({
       context.state.categories = categories.filter((item) => item.id !== id)
     },
     async upload(context) {
-      const res = axios.post(`${API_URL}/upload`, context.state.formData, {
+      const res = axios.post(`${BASE_URL}/upload`, context.state.formData, {
         'Content-Type': 'multipart/form-data'
       })
       return res
