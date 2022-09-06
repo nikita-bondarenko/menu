@@ -9,7 +9,8 @@
     "store": "http-server ./store/",
     "dev": "concurrently \"npm run client\" \"npm run server\"  \"npm run store\"",
     "build": "npm run build --prefix client",
-    "install": "npm install && npm install --prefix client",
+    "install": "npm install ",
+    "postinstall": "npm install --prefix client",
     "prestart": "npm run build ",
     "start": "node server/index.ts && npm run store"
   },
