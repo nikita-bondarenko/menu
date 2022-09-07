@@ -1,8 +1,12 @@
 # Menu
 
-## This is an app for filling the menu for restaurant.
+## This app is for filling restaurant menu.
 
-### ! Important:
+Backend: node, express, typeScript, Prisma, Docker, PostgreSQL
+
+Frontend: Vue, Axios, Bootstrap 4
+
+# ! Important:
 
 ## First initialize the prisma-client and connect to Docker locally (PostgreSQL)
 
