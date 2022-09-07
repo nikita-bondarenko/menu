@@ -1,6 +1,8 @@
-# test-work
+# Menu
 
-The menu for a restaurant or something like that. Enjoy it.
+## This is an app for filling the menu for restaurant.
+
+First initialize the prisma-client and connect to Docker (PostgreSQL)
 
 ## Install dependencies
 ```
