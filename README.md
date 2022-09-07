@@ -2,9 +2,9 @@
 
 ## This is an app for filling the menu for restaurant.
 
-### !Important:
+### ! Important:
 
-##First initialize the prisma-client and connect to Docker locally (PostgreSQL)
+## First initialize the prisma-client and connect to Docker locally (PostgreSQL)
 
 ## Install dependencies
 ```
