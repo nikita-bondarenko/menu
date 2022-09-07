@@ -8,7 +8,7 @@ Frontend: Vue, Axios, Bootstrap 4
 
 # ! Important:
 
-## First initialize the prisma-client and connect to Docker locally (PostgreSQL)
+## First initialize the prisma-client and connect to Docker locally (PostgreSQL). If you don't now how to do it, see [this wonderfull post](https://www.digitalocean.com/community/tutorials/how-to-build-a-rest-api-with-prisma-and-postgresql).
 
 ## Install dependencies
 ```
